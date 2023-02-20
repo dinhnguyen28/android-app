@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "935657139969",
+    "firebase_url": "https://final-andoird-default-rtdb.firebaseio.com",
+    "project_id": "final-andoird",
+    "storage_bucket": "final-andoird.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:935657139969:android:6b7997ae737c080f383500",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "935657139969-ggujf00n50ibppelnse9cu65qrb0bko7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwfkwxOYspQJhLsL6Rz3K2FBT2-AsRzTI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "935657139969-ggujf00n50ibppelnse9cu65qrb0bko7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:935657139969:android:7ff87def31fdad15383500",
+        "android_client_info": {
+          "package_name": "com.example.teachingassistant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "935657139969-ggujf00n50ibppelnse9cu65qrb0bko7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwfkwxOYspQJhLsL6Rz3K2FBT2-AsRzTI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "935657139969-ggujf00n50ibppelnse9cu65qrb0bko7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

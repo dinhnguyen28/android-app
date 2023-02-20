@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/addStudentToolbar"
+        android:title="Add Student"/>
+
+    <item
+        android:id="@+id/changeDateToolbar"
+        android:title="Change Date"/>
+    <item
+        android:id="@+id/exportData"
+        android:title="Export Data"/>
+</menu>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".ExportFile">
+
+    <include
+        android:id="@+id/toolbarMain"
+        layout="@layout/toolbar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:text="Export the list of students banned exam"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/txtExport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Name"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:text="Please choose the format you want"
+        android:textColor="#FF0000" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/exportFileDocx"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text=".DOCX"
+            android:textColor="@color/blue"
+            android:layout_margin="15dp"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/exportFilePdf"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text=".PDF"
+            android:textColor="@color/red"
+            android:layout_margin="15dp"
+            android:textSize="30sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/exportFileXls"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text=".XLS"
+            android:textColor="@color/green"
+            android:layout_margin="15dp"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

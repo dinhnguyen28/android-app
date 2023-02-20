@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardViewDialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="20dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/color_dialog">
+
+        <TextView
+            android:id="@+id/nameDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:text="Name Dialog"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="230dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:background="@color/black"
+            android:padding="10dp" />
+
+
+        <EditText
+            android:id="@+id/edtDialog1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:padding="7dp"
+            android:ems="17"
+            android:hint="Text 1"
+            android:background="@drawable/rounded_shape"/>
+
+
+        <EditText
+            android:id="@+id/edtDialog2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:padding="7dp"
+            android:ems="17"
+            android:hint="Text 2"
+            android:inputType="text"
+            android:background="@drawable/rounded_shape"/>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="15dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnAddDialog"
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:background="@drawable/round_btn"
+                android:text="ADD"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btnCancelDialog"
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="60dp"
+                android:background="@drawable/round_btn"
+                android:text="CANCEL"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

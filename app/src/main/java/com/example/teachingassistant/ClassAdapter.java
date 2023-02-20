@@ -1,0 +1,89 @@
+package com.example.teachingassistant;
+
+import android.content.Context;
+import android.view.ContextMenu;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
+
+public class ClassAdapter extends RecyclerView.Adapter<ClassAdapter.ClassViewHolder> {
+    ArrayList<ClassItem> classItems;
+    Context context;
+
+    private OnItemClickListener onItemClickListener;
+    public interface OnItemClickListener{
+        void onClick(int position);
+
+    }
+
+    public void clear(){
+        this.classItems = null;
+        this.context = null;
+    }
+
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
+    }
+
+
+    public ClassAdapter(Context context, ArrayList<ClassItem> classItems) {
+        this.classItems = classItems;
+        this.context = context;
+    }
+
+    public static class ClassViewHolder extends RecyclerView.ViewHolder implements View.OnCreateContextMenuListener {
+        TextView className;
+        TextView classInfo;
+        TextView numLesson;
+
+        public ClassViewHolder(@NonNull View itemView, OnItemClickListener onItemClickListener) {
+
+            super(itemView);
+            className = itemView.findViewById(R.id.classNameItem);
+            classInfo = itemView.findViewById(R.id.classInfoItem);
+            numLesson = itemView.findViewById(R.id.numberOfLesson);
+
+
+            itemView.setOnClickListener(v-> onItemClickListener.onClick(getAdapterPosition()) );
+            itemView.setOnCreateContextMenuListener(this);
+
+        }
+
+        @Override
+        public void onCreateContextMenu(ContextMenu contextMenu, View view, ContextMenu.ContextMenuInfo contextMenuInfo) {
+            contextMenu.add(getAdapterPosition(),0,0,"Edit");
+            contextMenu.add(getAdapterPosition(),1,0,"Delete");
+
+
+        }
+
+    }
+
+    @NonNull
+    @Override
+    public ClassViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.class_item,
+                                                                parent, false);
+
+        return new ClassViewHolder(itemView, onItemClickListener);
+
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull ClassViewHolder holder, int position) {
+    holder.className.setText(classItems.get(position).getClassName());
+    holder.classInfo.setText(classItems.get(position).getClassInfo());
+    holder.numLesson.setText(classItems.get(position).getNumberLesson());
+    }
+
+    @Override
+    public int getItemCount() {
+        return classItems.size();
+    }
+}
